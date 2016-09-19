@@ -1,0 +1,27 @@
+cd ..
+ls
+mv ~/Downloads/3015_jpeg.zip .
+ls
+unzip -t 3015_jpeg.zip 
+unzip -l 3015_jpeg.zip 
+testing: vip.jpg                  OK
+mkdir cisco_icons
+cd cisco_icons/
+unzip ../3015_jpeg.zip 
+ls
+cd ..
+ls
+rm 3015_jpeg.zip 
+ls
+exit
+cd ../cisco_icons/
+ls
+rename 's/ /_/g' *
+ls
+exit
+cd ../cisco_icons/
+ls
+exit
+ls
+cp hw1.pdf ~/Downloads/hw1.pdf
+exit

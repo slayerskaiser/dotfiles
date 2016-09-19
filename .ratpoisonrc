@@ -1,0 +1,30 @@
+set wingravity c
+exec wmname LG3D
+
+#escape C-z
+escape M-z
+bind Escape abort
+unbind exclam
+bind semicolon exec
+bind o focus
+
+exec /usr/bin/rpws init 6 -a
+bind F1 exec rpws 1
+bind F2 exec rpws 2
+bind F3 exec rpws 3
+bind F4 exec rpws 4
+bind F5 exec rpws 5
+bind F6 exec rpws 6
+bind C-F1 rpwsm1
+bind C-F2 rpwsm2
+bind C-F3 rpwsm3
+bind C-F4 rpwsm4
+bind C-F5 rpwsm5
+bind C-F6 rpwsm6
+
+definekey top C-M-Left rpwsp
+definekey top C-M-Right rpwsn
+definekey top C-M-S-Left rpwsmp
+definekey top C-M-S-Right rpwsmn
+definekey top M-Tab next
+definekey top M-ISO_Left_Tab prev
