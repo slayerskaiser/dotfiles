@@ -7,11 +7,16 @@
  '(TeX-newline-function (quote reindent-then-newline-and-indent))
  '(TeX-source-correlate-mode t)
  '(TeX-source-correlate-start-server t)
- '(custom-safe-themes (quote ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "68d36308fc6e7395f7e6355f92c1dd9029c7a672cbecf8048e2933a053cf27e6" "3ac266781ee0ac3aa74a6913a1506924cad669f111564507249f0ffa7c5e4b53" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" default)))
+ '(custom-safe-themes
+   (quote
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "68d36308fc6e7395f7e6355f92c1dd9029c7a672cbecf8048e2933a053cf27e6" "3ac266781ee0ac3aa74a6913a1506924cad669f111564507249f0ffa7c5e4b53" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" default)))
  '(global-visual-line-mode t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(matlab-shell-command-switches (quote ("-nodesktop -nosplash")))
+ '(package-selected-packages
+   (quote
+    (zenburn-theme yasnippet solarized-theme popwin leuven-theme goto-last-change find-file-in-project evil-leader evil-escape auctex async ace-jump-mode)))
  '(sentence-end-double-space nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
