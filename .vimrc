@@ -16,7 +16,11 @@ Plugin 'Latex-Box-Team/LaTeX-Box'
 Plugin 'easymotion/vim-easymotion'
 " Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'edkolev/promptline.vim'
 " Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'altercation/vim-colors-solarized'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -96,6 +100,10 @@ inoremap <S-CR> <Esc>
 inoremap AA <Esc>A
 inoremap II <Esc>I
 inoremap OO <Esc>O
+
+" airline options
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " Fix xterm redraw bug
 set ambiwidth=single
@@ -179,8 +187,9 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme zellner
-set background=light
+"colorscheme zellner
+colorscheme solarized
+set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
