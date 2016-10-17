@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: Tabular
-# key: tab
-# --
-\begin{tabular}{$1}
-$0
-\end{tabular}

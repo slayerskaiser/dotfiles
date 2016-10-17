@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: eqnolabel
-# key: \
-# --
-\[
-$0
-\]
