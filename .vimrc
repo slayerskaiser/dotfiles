@@ -100,6 +100,7 @@ inoremap <S-CR> <Esc>
 inoremap AA <Esc>A
 inoremap II <Esc>I
 inoremap OO <Esc>O
+nnoremap <CR><CR> o<Esc>
 
 " airline options
 let g:airline#extensions#tabline#enabled = 1
