@@ -1,0 +1,10 @@
+;; -*-lisp-*-
+
+(in-package :stumpwm)
+
+(set-prefix-key (kbd "M-z"))
+
+(undefine-key *root-map* (kbd "!"))
+(define-key *root-map* (kbd "/") "exec")
+
+(unclutter)
