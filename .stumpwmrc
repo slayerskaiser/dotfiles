@@ -2,7 +2,10 @@
 
 (in-package :stumpwm)
 
-(set-prefix-key (kbd "M-z"))
+(set-prefix-key (kbd "C-z"))
 
 (undefine-key *root-map* (kbd "!"))
 (define-key *root-map* (kbd "/") "exec")
+
+(define-key *top-map* (kbd "C-M-Right") "gnext")
+(define-key *top-map* (kbd "C-M-Left") "gprev")
