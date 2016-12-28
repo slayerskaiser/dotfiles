@@ -11,7 +11,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
-Plugin 'wincent/command-t'
+" Plugin 'wincent/command-t'
+Plugin 'kien/ctrlp.vim'
 Plugin 'Latex-Box-Team/LaTeX-Box'
 Plugin 'easymotion/vim-easymotion'
 " Plugin 'SirVer/ultisnips'
