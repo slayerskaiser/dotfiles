@@ -24,18 +24,19 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(add-hook 'LaTeX-mode-hook (lambda ()
-  (push
-    '("latexmk" "latexmk -pdf -pvc %s" TeX-run-TeX nil t
-      :help "Run latexmk on file")
-    TeX-command-list)))
-(add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "latexmk")))
 (require 'package)
 (push '("marmalade" . "http://marmalade-repo.org/packages/")
       package-archives )
 (push '("melpa" . "http://melpa.milkbox.net/packages/")
       package-archives)
 (package-initialize)
+(add-hook 'LaTeX-mode-hook (lambda ()
+  (push
+    '("latexmk" "latexmk -pdf -pvc %s" TeX-run-TeX nil t
+      :help "Run latexmk on file")
+    TeX-command-list)))
+(add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "latexmk")))
+(setq LaTeX-math-list '((?v "varepsilon") (?T "trans")))
 (load-theme 'zenburn)
 (require 'evil)
 (global-evil-leader-mode 1)
