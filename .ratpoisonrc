@@ -3,6 +3,9 @@ exec wmname LG3D
 
 #escape C-z
 escape M-z
+definekey top Menu readkey root
+bind Menu other
+
 bind Escape abort
 unbind exclam
 bind semicolon exec
@@ -28,3 +31,25 @@ definekey top C-M-S-Left rpwsmp
 definekey top C-M-S-Right rpwsmn
 definekey top M-Tab next
 definekey top M-ISO_Left_Tab prev
+
+bind grave select 0
+bind 0 select 10
+
+# Mouse control
+definekey top s-k ratrelwarp 0 -15
+definekey top s-j ratrelwarp 0 15
+definekey top s-h ratrelwarp -15 0
+definekey top s-l ratrelwarp 15 0
+definekey top s-u ratrelwarp -15 -15
+definekey top s-period ratrelwarp 15 15
+definekey top s-o ratrelwarp 15 -15
+definekey top s-m ratrelwarp -15 15
+definekey top s-Return ratclick 1
+definekey top s-BackSpace ratclick 3
+definekey top s-v rathold down 1
+
+# Volume control
+definekey top s-bracketright exec amixer -q set Master 5%+
+definekey top s-bracketleft exec amixer -q set Master 5%-
+definekey top s-backslash exec amixer -q set Master mute
+definekey top s-bar exec amixer -q set Master unmute
