@@ -19,8 +19,10 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'edkolev/promptline.vim'
 " Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+Plugin 'itchyny/lightline.vim'
+Plugin 'bling/vim-bufferline'
 Plugin 'altercation/vim-colors-solarized'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -104,8 +106,11 @@ inoremap OO <Esc>O
 nnoremap <CR><CR> o<Esc>
 
 " airline options
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline_powerline_fonts = 1
+
+" lightline options
+set showtabline=2
 
 " Fix xterm redraw bug
 set ambiwidth=single
@@ -190,16 +195,20 @@ set tm=500
 syntax enable
 
 "colorscheme zellner
+let g:solarized_termcolors=256
 colorscheme solarized
 set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
-    set guioptions+=e
-    set t_Co=256
+    set guioptions-=e
     set guitablabel=%M\ %t
 endif
+set t_Co=256
+
+" Hide mode information because of lightline
+set noshowmode
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -274,6 +283,9 @@ map <leader>bd :Bclose<cr>
 
 " Close all the buffers
 map <leader>ba :1,1000 bd!<cr>
+
+" List and switch buffer
+nnoremap <leader>bb :ls<cr>:b<space>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
@@ -395,7 +407,7 @@ map <leader>s? z=
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scripbble
-map <leader>q :e ~/buffer<cr>
+" map <leader>q :e ~/buffer<cr>
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
