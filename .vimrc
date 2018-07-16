@@ -13,12 +13,14 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " Plugin 'wincent/command-t'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Latex-Box-Team/LaTeX-Box'
+" Plugin 'Latex-Box-Team/LaTeX-Box'
+Plugin 'lervag/vimtex'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'Valloric/YouCompleteMe'
+" Plugin 'ervandew/supertab'
 Plugin 'edkolev/promptline.vim'
-" Plugin 'Valloric/YouCompleteMe'
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
 Plugin 'itchyny/lightline.vim'
@@ -28,8 +30,8 @@ Plugin 'altercation/vim-colors-solarized'
 call vundle#end()            " required
 
 " set runtime path to include ultisnips 3.0
-set rtp+=~/.vim/ultisnips
-set rtp+=~/.vim/matlab
+"set rtp+=~/.vim/ultisnips
+"set rtp+=~/.vim/matlab
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: 
@@ -93,6 +95,7 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
+inoremap ,w <Esc>:w<cr>a
 
 " Redraw screen
 " nmap <C-a> :redraw!<cr>
@@ -122,9 +125,14 @@ cmap w!! w !sudo tee > /dev/null %
 set winaltkeys=no
 
 " LaTeX-Box options
-let g:LatexBox_latexmk_async = 1
-let g:LatexBox_latexmk_preview_continuously = 1
-let g:LaTeXBox_quickfix = 2
+" let g:LatexBox_latexmk_async = 1
+" let g:LatexBox_latexmk_preview_continuously = 1
+" let g:LaTeXBox_quickfix = 2
+
+" vimtex options
+" let g:vimtex_view_method = 'general'
+" let g:vimtex_view_general_viewer = 'mupdf'
+let g:vimtex_view_method = 'mupdf'
 
 " Make Ultisnips work with YouCompleteMe
 " let g:UltiSnipsExpandTrigger = "<c-j>"
@@ -202,7 +210,8 @@ set background=dark
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
-    set guioptions-=e
+    set guioptions+=e
+    set t_Co=256
     set guitablabel=%M\ %t
 endif
 set t_Co=256
@@ -224,6 +233,7 @@ set ffs=unix,dos,mac
 set nobackup
 set nowb
 set noswapfile
+set noundofile
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
