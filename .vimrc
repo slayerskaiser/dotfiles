@@ -18,7 +18,7 @@ Plugin 'lervag/vimtex'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 " Plugin 'ervandew/supertab'
 Plugin 'edkolev/promptline.vim'
 " Plugin 'vim-airline/vim-airline'
@@ -26,6 +26,7 @@ Plugin 'edkolev/promptline.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'bling/vim-bufferline'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-surround'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -133,6 +134,7 @@ set winaltkeys=no
 " let g:vimtex_view_method = 'general'
 " let g:vimtex_view_general_viewer = 'mupdf'
 let g:vimtex_view_method = 'mupdf'
+let g:vimtex_quickfix_blgparser = {'disable' : 1}
 
 " Make Ultisnips work with YouCompleteMe
 " let g:UltiSnipsExpandTrigger = "<c-j>"
